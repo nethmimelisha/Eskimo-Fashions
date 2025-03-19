@@ -24,6 +24,8 @@
     <!-- FONTS -->
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,400italic,500,700,700italic,900'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:100,200,300,400,400italic,500,700,700italic,900'>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Raleway:wght@300;700&display=swap" rel="stylesheet">
+
 
     <!-- CSS -->
     <link rel='stylesheet' href='css/global.css'>
@@ -38,7 +40,26 @@
 </head>
 
 <body class="page style-simple button-custom layout-full-width if-zoom no-content-padding hide-love header-transparent header-fw minimalist-header-no sticky-header sticky-tb-color ab-hide subheader-title-left menu-line-below-80-1 menuo-right menuo-no-borders footer-copy-center mobile-tb-center mobile-mini-mr-ll tablet-sticky mobile-header-mini mobile-sticky">
-	<div id="Wrapper">
+	
+    <div id="preloader">
+        <img src="images/eskimo.png" alt="Eskimo Logo" class="logo">
+        <p id="loading-text">Welcome to Eskimo Fashions <br></p>
+        <p id="loading-text">🧶 Knitting in progress...</p>
+
+        <!-- Countdown with Progress Circle -->
+        <div class="countdown-container">
+            <svg width="120" height="120">
+                <!-- Background Track -->
+                <circle cx="60" cy="60" r="50" class="progress-ring__background"></circle>
+
+                <!-- Animated Progress Circle -->
+                <circle class="progress-ring__circle" cx="60" cy="60" r="50"></circle>
+            </svg>
+            <div id="countdown">5</div>
+        </div>
+    </div>
+    
+    <div id="Wrapper">
         <div id="Header_wrapper" class>
             <header id="Header">
 
@@ -121,13 +142,13 @@
                                 </rs-layer>
                                 <rs-layer id="slider-1-slide-1-layer-7" class="rs-layer-static" data-type="text" data-rsp_ch="on" data-xy="xo:465px,465px,53px,53px;y:m;yo:-144px,-144px,-99px,-99px;" data-text="w:normal;s:18,18,12,12;l:25,25,31,31;ls:2,2,0,2;" data-onslides="s:1;" data-frame_0="x:0,0,0px,0px;y:0,0,0px,0px;"
                                     data-frame_1="x:0,0,0px,0px;y:0,0,0px,0px;" data-frame_999="o:0;st:w;" style="z-index:10;font-family:Roboto;">
-                                    MODERN & WARM
+                                    POWERED BY PEOPLE & FASHION
                                 </rs-layer>
                                 <rs-layer id="slider-1-slide-1-layer-8" class="rs-layer-static" data-type="text" data-rsp_ch="on" data-xy="x:c,c,l,c;xo:157px,157px,50px,50px;y:m;yo:9px,9px,5px,5px;" data-text="w:normal;s:69,69,55,55;l:84,84,61,61;fw:700;" data-onslides="s:1;" data-frame_999="o:0;st:w;"
                                     style="z-index:11;font-family:Roboto;">
-                                    A touch of luxury
-                                    <br> and warmth for your
-                                    <br> living space
+                                    Eskimo Fashions -
+                                    <br> Timeless fashion
+                                    <br> crafted for true elegance.
                                 </rs-layer>
                                 <rs-layer id="slider-1-slide-1-layer-9" class="rs-layer-static" data-type="image" data-rsp_ch="on" data-xy="x:r;xo:140px,140px,87px,87px;y:b;yo:46px,46px,28px,28px;" data-text="w:normal;s:20,20,12,12;l:0,0,15,15;" data-dim="w:50px,50px,31px,31px;h:50px,50px,31px,31px;"
                                     data-actions="o:click;a:jumptoslide;slide:previous;" data-basealign="slide" data-onslides="s:1;" data-frame_999="o:0;st:w;" style="z-index:13;cursor:pointer;"><img src="images/home2-slider-arrow-left.png" width="50" height="50">
@@ -639,6 +660,31 @@
 		}
 	});
     </script>
+
+<script>
+    let timeLeft = 5; // Countdown from 5 seconds
+    const countdownElement = document.getElementById("countdown");
+    const progressCircle = document.querySelector(".progress-ring__circle");
+    const circumference = 314; // Full circle circumference (2πr)
+
+    function updateCountdown() {
+        if (timeLeft >= 0) {
+            countdownElement.innerText = timeLeft;
+            progressCircle.style.strokeDashoffset = (timeLeft / 5) * circumference;
+            
+            timeLeft--;
+            setTimeout(updateCountdown, 1000);
+        } else {
+            document.getElementById("preloader").classList.add("fade-out"); // Fade out preloader
+            setTimeout(() => {
+                document.getElementById("preloader").style.display = "none"; // Hide preloader
+            }, 1000);
+        }
+    }
+
+    // Start countdown on page load
+    updateCountdown();
+</script>
 
 
 </body>
