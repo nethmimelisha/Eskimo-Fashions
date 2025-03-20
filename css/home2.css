@@ -71,7 +71,7 @@ svg {
 
 /* Animated Progress Circle */
 .progress-ring__circle {
-	stroke: #64b5f6; /* Light blue */
+	stroke: #0f1e2b; /* Light blue */
 	stroke-width: 8;
 	fill: transparent;
 	stroke-linecap: round;
