@@ -1,4 +1,78 @@
- /* Product Gallery Styles */
+.career-header {
+	text-align: center;
+	padding: 60px 20px;
+	background: #f8f9fa;
+}
+.career-header h1 {
+	font-size: 36px;
+	color: #13192f;
+}
+.career-intro {
+	text-align: center;
+	margin: 30px auto;
+	max-width: 800px;
+	font-size: 18px;
+	color: #555;
+}
+.job-listing {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+	padding: 40px;
+}
+.job-card {
+	background: white;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	width: 300px;
+	text-align: center;
+}
+.job-card h3 {
+	color: #007bff;
+	font-size: 20px;
+}
+.apply-btn {
+	display: block;
+	margin-top: 15px;
+	padding: 10px;
+	background: #007bff;
+	color: white;
+	text-decoration: none;
+	border-radius: 5px;
+}
+.benefits-section {
+	background: #d8d8d9;
+	color: white;
+	text-align: center;
+	padding: 50px 20px;
+}
+.apply-form {
+	max-width: 600px;
+	margin: auto;
+	padding: 40px;
+	background: #f8f9fa;
+	border-radius: 10px;
+}
+.apply-form input, .apply-form textarea {
+	width: 100%;
+	padding: 10px;
+	margin: 10px 0;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+.submit-btn {
+	background: #007bff;
+	color: white;
+	padding: 10px 15px;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	width: 100%;
+}
+
+/* Product Gallery Styles */
  .gallery-section {
 	text-align: center;
 	padding: 60px 20px;
